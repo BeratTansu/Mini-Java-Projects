@@ -100,15 +100,18 @@ flowchart TD
     A[Start Program] --> B[Initialize 4x4 Card Board]
     B --> C[Game Loop]
     C --> D{All Cards Revealed?}
-    D -->|Yes| E[Print 'Game Finished'] --> F[End]
-    D -->|No| G[Print Board]
-    G --> H[Ask for First Guess (i1, j1)]
-    H --> I[Reveal First Card]
-    I --> J[Print Board]
-    J --> K[Ask for Second Guess (i2, j2)]
-    K --> L{Values Match?}
-    L -->|Yes| M[Keep Both Cards Revealed] --> C
-    L -->|No| N[Hide First Card Again] --> C
+    D -->|Yes| E[Print Game Finished & Exit]
+    D -->|No| F[Print Current Board]
+    F --> G[Ask for first guess (i1, j1)]
+    G --> H[Reveal first card]
+    H --> I[Print Board]
+    I --> J[Ask for second guess (i2, j2)]
+    J --> K{Values match?}
+    K -->|Yes| L[Keep both cards revealed]
+    K -->|No| M[Hide first card again]
+    L --> C
+    M --> C
+
 ```
 
 ## ▶️ How It Works (Step-by-Step)
