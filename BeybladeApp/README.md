@@ -152,16 +152,23 @@ Welcome to the Beyblade Program...
 Press 'Q' to exit.
 
 Which Beyblade would you like to produce?
+
 Dragon
 
 Blader Name: Takao
+
 Attack Power: 300
+
 Rotation Speed: 800
+
 Sacred Beast Name: Blue Dragon
+
 Hidden Ability: Communicating with the Sacred Beast
 
 Takao attacks with 300 and 800 rotation speed...
+
 Takao is summoning Blue Dragon...
+
 Takao's Attack: Phantom Cyclone
 
 ## 🎯 Purpose of the Project
@@ -179,4 +186,5 @@ Factory Pattern
 ## 📄 License
 
 This project is open-source.
+
 You may use, modify, or extend it freely.
