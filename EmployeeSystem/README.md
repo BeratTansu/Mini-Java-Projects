@@ -46,7 +46,7 @@ Console I/O (Scanner)
 
 Encapsulation, Inheritance, Polymorphism
 
-## 📁 Class Structure
+## 📁 Folder Structure
 
 src/
 │
