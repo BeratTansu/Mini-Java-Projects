@@ -100,18 +100,25 @@ classDiagram
 flowchart TD
     A[Start Program] --> B[Initialize 4x4 Card Board]
     B --> C[Game Loop]
-    C --> D{Are All Cards Revealed?}
-    D -->|Yes| E[Print "Game Finished" and Exit]
-    D -->|No| F[Print Board]
-    F --> G[Ask for First Guess]
-    G --> H[Reveal First Card]
-    H --> I[Print Board]
-    I --> J[Ask for Second Guess]
-    J --> K{Do Values Match?}
-    K -->|Yes| L[Keep Both Cards Revealed]
-    K -->|No| M[Hide First Card Again]
-    L --> C
+
+    C --> D{All Cards Revealed}
+    D -->|Yes| E[Print Game Finished]
+    E --> F[End]
+    D -->|No| G[Print Current Board]
+
+    G --> H[Ask First Guess i1 j1]
+    H --> I[Reveal First Card]
+    I --> J[Print Board]
+
+    J --> K[Ask Second Guess i2 j2]
+    K --> L{Values Match}
+
+    L -->|Yes| M[Keep Both Cards Revealed]
     M --> C
+
+    L -->|No| N[Hide First Card Again]
+    N --> C
+
 ```
 
 
