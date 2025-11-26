@@ -128,3 +128,55 @@ classDiagram
     Beyblade <|-- Drayga
     Beyblade <|-- Draciel
     BeybladeFactory --> Beyblade
+```
+
+## 🔁 Program Flow (Flowchart)
+```mermaid
+flowchart TD
+    A[Start Game] --> B[Initialize 4x4 Cards]
+    B --> C[Game Loop]
+    C --> D[Print Board]
+    D --> E[Player Guess #1]
+    E --> F[Player Guess #2]
+    F --> G{Match?}
+    G -->|Yes| H[Reveal Permanently]
+    G -->|No| I[Hide Again]
+    H --> C
+    I --> C
+    C -->|All revealed| Z[Game Finished]
+```
+
+## ▶️ Example Run
+
+Welcome to the Beyblade Program...
+Press 'Q' to exit.
+
+Which Beyblade would you like to produce?
+Dragon
+
+Blader Name: Takao
+Attack Power: 300
+Rotation Speed: 800
+Sacred Beast Name: Blue Dragon
+Hidden Ability: Communicating with the Sacred Beast
+
+Takao attacks with 300 and 800 rotation speed...
+Takao is summoning Blue Dragon...
+Takao's Attack: Phantom Cyclone
+
+## 🎯 Purpose of the Project
+
+This is a small Java OOP practice project designed to reinforce:
+
+Class inheritance
+
+Method overriding
+
+Polymorphism
+
+Factory Pattern
+
+## 📄 License
+
+This project is open-source.
+You may use, modify, or extend it freely.
