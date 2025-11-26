@@ -72,6 +72,7 @@ Follow these steps to run the project locally:
 ### 1️⃣ Clone the repository and directly enter BeybladeApp folder
 
 git clone https://github.com/berattansu/mini-java-projects.git
+
 cd mini-java-projects/BeybladeApp
 
 ### 2️⃣ Compile all Java files
