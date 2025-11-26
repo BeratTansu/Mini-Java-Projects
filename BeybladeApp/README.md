@@ -83,7 +83,7 @@ javac *.java
 java Test
 
 ## 🧬 UML Class Diagram (Mermaid)
-
+```mermaid
 classDiagram
     class Beyblade {
         -String bladerName
