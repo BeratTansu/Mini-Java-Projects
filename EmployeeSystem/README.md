@@ -1,53 +1,53 @@
 # Employee Management System (Java OOP)
 
-This project is a simple Java application that demonstrates Object-Oriented Programming (OOP) principles through an employee management system.
-It includes examples of inheritance, method overriding, encapsulation, and console-based program flow.
+This project is a simple Java application that demonstrates core Object-Oriented Programming (OOP) principles using an employee-based system.
+It includes inheritance, polymorphism, method overriding, encapsulation, menu-based user interaction, and real-time console input.
 
 ## 📌 Project Overview
 
-The application allows users to perform actions on two types of employees:
+The system lets the user perform operations on two employee types:
 
-Software Developer (Developer)
+Developer
 
 Manager
 
-Each employee type has its own properties and custom methods, implemented using inheritance and polymorphism.
+Each employee type extends a shared base class (Employee) and adds its own unique behaviors.
 
 ## 🧩 Features
+### ✔️ Object-Oriented Concepts
 
-Base class Employee holding shared attributes
+Inheritance (Developer & Manager inherit Employee)
 
-Derived classes:
+Polymorphism (overridden showInfo() methods)
 
-Developer (can install OS)
+Encapsulation (private fields + getters/setters)
 
-Manager (can give raises)
+Method Overriding
 
-Console-driven menu system
+Composition (menu-driven program flow)
 
-Method overriding for displaying information
+### ✔️ Functional Features
 
-Encapsulation with getters/setters
+Developers can install an Operating System
 
-Continuous interactive loop until user exits
+Managers can give a raise
+
+User-friendly text-based menu navigation
+
+Continuous program loop until user quits (q)
 
 ## 🛠️ Technologies Used
 
 Java 8+
 
-OOP Concepts
+OOP Principles
 
-Inheritance
+Console I/O (Scanner)
 
-Polymorphism
-
-Encapsulation
-
-Method Overriding
-
-Scanner-based console input
+Encapsulation, Inheritance, Polymorphism
 
 ## 📁 Class Structure
+
 src/
 │
 ├── Employee.java
@@ -55,60 +55,121 @@ src/
 ├── Manager.java
 └── Main.java
 
-## ▶️ How It Works
+## 🧪 Getting Started
 
-Program starts and welcomes the user.
+Follow the steps below to run the project locally:
 
-User chooses:
+### 1️⃣ Clone the Repository
 
-Developer operations
+git clone https://github.com/berattansu/mini-java-projects.git
 
-Manager operations
+### 2️⃣ Navigate to the Employee System Folder
 
-Quit
+cd mini-java-projects/EmployeeSystem
 
-Developer options:
+### 3️⃣ Compile Java Files
 
-Install OS
+javac *.java
 
-Show info
+### 4️⃣ Run the Program
 
-Manager options:
+java Main
 
-Give raise
+## 🧬 UML Class Diagram (Mermaid)
+```mermaid
+classDiagram
+    class Employee {
+        -String firstName
+        -String lastName
+        -int id
+        +showInfo()
+        +getters/setters
+    }
 
-Show info
+    class Developer {
+        -String programmingLanguages
+        +installOS(os)
+        +showInfo()
+    }
 
-Operations continue until user quits.
+    class Manager {
+        -int numberOfEmployees
+        +giveRaise(amount)
+        +showInfo()
+    }
 
-## 📷 Example Run
+    Employee <|-- Developer
+    Employee <|-- Manager
+```
+
+## 🔁 Program Flow (Flowchart)
+```mermaid
+flowchart TD
+    A[Start Program] --> B[Show Main Menu]
+    B --> C{User Selection}
+
+    C -->|Developer| D[Developer Menu]
+    C -->|Manager| E[Manager Menu]
+    C -->|Q| F[Exit Program]
+    C -->|Invalid| B
+
+    D --> G{Developer Action}
+    G -->|Install OS| H[Perform OS Install] --> B
+    G -->|Show Info| I[Display Developer Info] --> B
+    G -->|Q| B
+
+    E --> J{Manager Action}
+    J -->|Give Raise| K[Manager Gives Raise] --> B
+    J -->|Show Info| L[Display Manager Info] --> B
+    J -->|Q| B
+
+    F --> M[End]
+```
+
+## ▶️ Example Run
+
 Welcome to the Employee Management System...
+
 ------------------------------------------
+
 1. Developer Operations
+
 2. Manager Operations
+
 Press 'q' to exit
+
 ------------------------------------------
 
 Choose an operation:
+
 1
 
 Developer Menu:
+
 1. Install OS
+
 2. Show Info
+
 Press 'q' to exit
 
 Choose:
+
 1
+
 Enter Operating System:
+
 Windows
+
 Berat is installing Windows...
 
-## 📌 Purpose of the Project
+## 🎯 Purpose of the Project
 
-This project serves as a small but effective demonstration of Object-Oriented Programming fundamentals through a realistic employee-based scenario.
-It is designed as a mini Java practice project for learning and teaching OOP.
+This project serves as a small but effective demonstration of OOP fundamentals and simulates real-life employee operations.
+
+It is designed as a clean and simple mini-project for learning and practicing Java OOP.
 
 ## 📄 License
 
 This project is open-source.
-Feel free to use, modify, or distribute it as you wish.
+
+Feel free to use, modify, or extend it as you like.
