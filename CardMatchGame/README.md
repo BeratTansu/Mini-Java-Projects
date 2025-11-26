@@ -94,25 +94,26 @@ classDiagram
     Main --> Card : uses
 ```
 
-## 🔁 Program Flow (Flowchart)
+## 🧩 Program Flow (Flowchart)
+
 ```mermaid
 flowchart TD
     A[Start Program] --> B[Initialize 4x4 Card Board]
     B --> C[Game Loop]
-    C --> D{All Cards Revealed?}
-    D -->|Yes| E[Print Game Finished & Exit]
-    D -->|No| F[Print Current Board]
-    F --> G[Ask for first guess (i1, j1)]
-    G --> H[Reveal first card]
+    C --> D{Are All Cards Revealed?}
+    D -->|Yes| E[Print "Game Finished" and Exit]
+    D -->|No| F[Print Board]
+    F --> G[Ask for First Guess]
+    G --> H[Reveal First Card]
     H --> I[Print Board]
-    I --> J[Ask for second guess (i2, j2)]
-    J --> K{Values match?}
-    K -->|Yes| L[Keep both cards revealed]
-    K -->|No| M[Hide first card again]
+    I --> J[Ask for Second Guess]
+    J --> K{Do Values Match?}
+    K -->|Yes| L[Keep Both Cards Revealed]
+    K -->|No| M[Hide First Card Again]
     L --> C
     M --> C
-
 ```
+
 
 ## ▶️ How It Works (Step-by-Step)
 
