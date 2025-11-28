@@ -49,3 +49,90 @@ To run the Singer Management System, follow these steps in your terminal:
 
 ### 1️⃣ Clone the Repository
 git clone https://github.com/berattansu/mini-java-projects.git
+
+### 2️⃣ Navigate to the Project Folder
+cd mini-java-projects/SingersSystem
+
+### 3️⃣ Compile the Java Files
+javac *.java
+
+### 4️⃣ Run the Application
+java Main
+
+## 🧬 UML Class Diagram (Mermaid)
+```mermaid
+classDiagram
+    class Singers {
+        -ArrayList<String> singerList
+        +printSingers() void
+        +addSinger(String name) void
+        +updateSinger(String newName, int position) void
+        +removeSinger(int position) void
+        +searchSinger(String singerName) void
+    }
+
+    class Main {
+        -Singers singers
+        -Scanner scanner
+        +main(String[] args) void
+        +printOperations() void
+        +viewSingers() void
+        +addSinger() void
+        +updateSinger() void
+        +removeSinger() void
+        +searchSinger() void
+    }
+
+    Main --> Singers : uses
+```
+
+## 🔁 Program Flow (Flowchart)
+The flowchart visualizes the sequence of operations within the main application loop:
+```mermaid
+flowchart TD
+    A[Start Program] --> B[Initialize Singers and Scanner]
+    B --> C[Display Menu]
+
+    C --> D[Game Loop: while isRunning]
+
+    D --> E[Ask User to Select Operation (0-6)]
+    E --> F{Operation Choice?}
+
+    F -->|0| C
+    F -->|1| G[Call viewSingers()]
+    G --> D
+
+    F -->|2| H[Call addSinger()]
+    H --> D
+
+    F -->|3| I[Call updateSinger()]
+    I --> D
+
+    F -->|4| J[Call removeSinger()]
+    J --> D
+
+    F -->|5| K[Call searchSinger()]
+    K --> D
+
+    F -->|6| L[Set isRunning = false]
+    L --> M[End Program]
+    
+    F -->|Invalid| N[Show Error]
+    N --> D
+```
+
+## ▶️ How It Works (Step-by-Step)
+The application starts by displaying a menu of available operations:
+
+1. Welcome: Displays the welcome message and the initial list of commands.
+
+2. Input: The user selects an operation number (0-6).
+
+3. Execute Operation:
+   View (1): Calls singers.printSingers() to list all current entries.
+   Add (2): Prompts for a name and calls singers.addSinger().
+   Update (3): Prompts for a 1-based position and a new name, then calls singers.updateSinger(name, position - 1).
+   Remove (4): Prompts for a 1-based position and calls singers.removeSinger(position - 1).
+   Search (5): Prompts for a name and calls singers.searchSinger().
+
+4. Loop: After each operation, the user is prompted to select the next action until they choose option 6 to exit.
