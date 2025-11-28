@@ -95,29 +95,30 @@ flowchart TD
 
     C --> D{Game Loop: while isRunning}
 
-    D --> E[Ask User to Select Operation (0-6)]
+    D --> E[Ask User to Select Operation]
+
     E --> F{Operation Choice?}
 
-    F -->|0| C
-    F -->|1| G[Call viewSingers]
+    F -->|0: View Operations| C
+    F -->|1: View Singers| G[Call viewSingers]
     G --> D
 
-    F -->|2| H[Call addSinger]
+    F -->|2: Add Singer| H[Call addSinger]
     H --> D
 
-    F -->|3| I[Call updateSinger]
+    F -->|3: Update Singer| I[Call updateSinger]
     I --> D
 
-    F -->|4| J[Call removeSinger]
+    F -->|4: Remove Singer| J[Call removeSinger]
     J --> D
 
-    F -->|5| K[Call searchSinger]
+    F -->|5: Search Singer| K[Call searchSinger]
     K --> D
 
-    F -->|6| L[Set isRunning = false]
+    F -->|6: Quit| L[Set isRunning = false]
     L --> M[End Program]
     
-    F -->|Invalid| N[Show Error Message]
+    F -->|Invalid Choice| N[Show Error Message]
     N --> D
 ```
 
