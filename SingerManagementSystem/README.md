@@ -130,9 +130,74 @@ The application starts by displaying a menu of available operations:
 
 3. Execute Operation:
    View (1): Calls singers.printSingers() to list all current entries.
+   
    Add (2): Prompts for a name and calls singers.addSinger().
+   
    Update (3): Prompts for a 1-based position and a new name, then calls singers.updateSinger(name, position - 1).
+   
    Remove (4): Prompts for a 1-based position and calls singers.removeSinger(position - 1).
+   
    Search (5): Prompts for a name and calls singers.searchSinger().
 
-4. Loop: After each operation, the user is prompted to select the next action until they choose option 6 to exit.
+5. Loop: After each operation, the user is prompted to select the next action until they choose option 6 to exit.
+
+## 📷 Example Run
+Welcome to the Singer Application...
+
+     0 - View Operations
+     
+     1 - View Singers
+     
+     2 - Add Singer
+     
+     3 - Update Singer
+     
+     4 - Remove Singer
+     
+     5 - Search Singer
+     
+     6 - Quit Application
+
+***********************************
+
+Select an Operation: 2
+
+Enter the name of the singer you want to add:
+
+Adele
+
+Singer list has been updated...
+
+Select an Operation: 1
+
+There are 1 singers in the list.
+
+1. Singer: Adele
+
+Select an Operation: 5
+
+Enter the name of the singer you want to search for:
+
+Adele
+
+Singer found!
+
+Adele is at position 1
+
+Select an Operation: 6
+
+Exiting Application...
+
+## 🎯 Purpose of the Project
+This mini project was designed to practice and understand:
+
+    Dynamic Data Structures: The fundamental usage and flexibility of the ArrayList.
+
+    Encapsulation: Separating the data management logic (Singers.java) from the user interaction logic (Main.java).
+
+    Input Handling: Reading user input and making necessary conversions (like 1-based index to 0-based index) for effective processing.
+
+    Menu Interface: Structuring a simple but complete user experience using a loop and switch statement.
+
+## 📄 License
+This project is open-source and licensed for free use.
