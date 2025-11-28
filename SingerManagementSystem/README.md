@@ -93,31 +93,31 @@ flowchart TD
     A[Start Program] --> B[Initialize Singers and Scanner]
     B --> C[Display Menu]
 
-    C --> D[Game Loop: while isRunning]
+    C --> D{Game Loop: while isRunning}
 
     D --> E[Ask User to Select Operation (0-6)]
     E --> F{Operation Choice?}
 
     F -->|0| C
-    F -->|1| G[Call viewSingers()]
+    F -->|1| G[Call viewSingers]
     G --> D
 
-    F -->|2| H[Call addSinger()]
+    F -->|2| H[Call addSinger]
     H --> D
 
-    F -->|3| I[Call updateSinger()]
+    F -->|3| I[Call updateSinger]
     I --> D
 
-    F -->|4| J[Call removeSinger()]
+    F -->|4| J[Call removeSinger]
     J --> D
 
-    F -->|5| K[Call searchSinger()]
+    F -->|5| K[Call searchSinger]
     K --> D
 
     F -->|6| L[Set isRunning = false]
     L --> M[End Program]
     
-    F -->|Invalid| N[Show Error]
+    F -->|Invalid| N[Show Error Message]
     N --> D
 ```
 
@@ -142,6 +142,7 @@ The application starts by displaying a menu of available operations:
 5. Loop: After each operation, the user is prompted to select the next action until they choose option 6 to exit.
 
 ## 📷 Example Run
+```
 Welcome to the Singer Application...
 
      0 - View Operations
@@ -187,8 +188,9 @@ Adele is at position 1
 Select an Operation: 6
 
 Exiting Application...
-
+```
 ## 🎯 Purpose of the Project
+```
 This mini project was designed to practice and understand:
 
     Dynamic Data Structures: The fundamental usage and flexibility of the ArrayList.
@@ -198,6 +200,6 @@ This mini project was designed to practice and understand:
     Input Handling: Reading user input and making necessary conversions (like 1-based index to 0-based index) for effective processing.
 
     Menu Interface: Structuring a simple but complete user experience using a loop and switch statement.
-
+```
 ## 📄 License
 This project is open-source and licensed for free use.
