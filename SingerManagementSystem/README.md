@@ -39,8 +39,11 @@ Console I/O (Scanner)
 ## 📁 Folder Structure
 
 src/
+
 │
+
 ├── Singers.java   // The class that manages the ArrayList and business logic
+
 └── Main.java      // The main class that handles the user interface and program flow
 
 ## 🧪 Getting Started
